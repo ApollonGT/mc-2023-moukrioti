@@ -27,4 +27,5 @@ Data Source: (https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dat
 
 **Summary**
 
---text--
+The paper uses a dataset with 51290 rows - 24 col. of online consumer orders from around the world. The aim of this paper is to investigate how consumer and product analysis using big data contributes significantly to making good business decisions. It first provides an overview of big data and its analysis for the business sector. It then discusses what is consumer and product analysis while examining the techniques that have been used so far in order to extract valuable business insights from these analyses. And also, explore the role of consumer and product analytics in making good business decisions, identifying important challenges and ethical precautions.
+
