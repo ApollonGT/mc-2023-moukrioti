@@ -23,7 +23,7 @@
     </tr>
 </table>
 
-Data Source: --(https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dataset?resource=download)--
+Data Source: (https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dataset?resource=download)
 
 **Summary**
 
