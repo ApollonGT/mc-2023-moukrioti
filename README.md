@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <th>Topic</th>
-        <td><em></em></td>
+        <td>Consumer and Product analysis in Business decision-making</td>
     </tr>
     <tr>
         <th>Student</th>
@@ -23,7 +23,7 @@
     </tr>
 </table>
 
-Data Source: --link--
+Data Source: --(https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dataset?resource=download)--
 
 **Summary**
 
