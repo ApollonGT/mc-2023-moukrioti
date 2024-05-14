@@ -118,7 +118,7 @@ if selected =="Exploratory Analysis":
 
     st.subheader(f"Correlation Matrix")
 
-    Correlation_Matrix_plot = 'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Correlation Matrix.png'
+    Correlation_Matrix_plot = 'Dashboard'/ 'Correlation Matrix.png'
     correlation_plot = Image.open(Correlation_Matrix_plot)
 
     # correlation_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Correlation Matrix.png')
