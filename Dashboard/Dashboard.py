@@ -70,7 +70,7 @@ if selected =="Project Overview":
     st.markdown('* The dataset used in this paper was found on Kaggle and contains details of online orders made by people around the world between 2011 and 2014.')
 
     Global_Superstore2_csv = Path(__file__).parents[1] / 'Dashboard' / 'Global_Superstore2.csv'
-    project_data= pd.read_csv(Global_Superstore2_csv)
+    project_data= pd.read_csv(Global_Superstore2_csv, encoding = 'latin-1')
     #project_data = pd.read_csv(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Global_Superstore2.csv', encoding='latin-1')
     st.write(project_data.head())
 
