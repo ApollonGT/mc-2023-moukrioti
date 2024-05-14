@@ -67,7 +67,8 @@ if selected =="Project Overview":
     st.subheader(f"Global Super Store Dataset")
     st.markdown('* The dataset used in this paper was found on Kaggle and contains details of online orders made by people around the world between 2011 and 2014.')
 
-    project_data = pd.read_csv(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Global_Superstore2.csv', encoding='latin-1')
+    project_data = pd.read_csv(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\new_df.csv')
+    #encoding='latin-1
     st.write(project_data.head())
 
     st.subheader(f"New Features")
@@ -260,7 +261,7 @@ if selected =="Clustering":
 
     # Display PCA plot
     st.subheader(f"3D Plot")
-    pca_plot = load_plot("3D Plot.png")
+    pca_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\3D Plot.png')
     st.image(pca_plot, use_column_width=True, caption="Plot with xlabel=PC1, ylabel=PC2, zlabel=PC3 and color= Cluster")
 
 # Classification Page
