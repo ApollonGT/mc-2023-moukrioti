@@ -71,7 +71,7 @@ if selected =="Project Overview":
 
     Global_Superstore2_csv = Path(__file__).parents[1] / 'Dashboard' / 'Global_Superstore2.csv'
     project_data= pd.read_csv(Global_Superstore2_csv, encoding = 'latin-1')
-    #project_data = pd.read_csv(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Global_Superstore2.csv', encoding='latin-1')
+    
     st.write(project_data.head())
 
     st.subheader(f"New Features")
@@ -89,7 +89,8 @@ if selected =="Project Overview":
 if selected =="Exploratory Analysis":
     st.title(f"Exploratory Analysis")
     
-    exploratory_data = load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\new_df.csv')
+    new_df_csv = Path(__file__).parents[1] / 'Dashboard' / 'new_df.csv'
+    exploratory_data= load_data(new_df_csv)
     
     numeric_data = exploratory_data[['Sales','Quantity','Discount','Profit','Shipping Cost']]
     qualitative_data = exploratory_data[['Ship Mode','Segment','Region','Category','Sub-Category','gender','Order Priority']]
@@ -272,7 +273,10 @@ if selected =="Clustering":
 if selected =="Classification":
     st.title(f"Classification")
 
-    classification_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\combined_data.csv')
+    combined_data_csv = Path(__file__).parents[1] / 'Dashboard' / 'combined_data.csv'
+    classification_data= load_data(combined_data_csv)
+
+    #classification_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\combined_data.csv')
 
     st.header(f"Random Forest for Classification")
 
@@ -308,7 +312,10 @@ if selected =="Classification":
 if selected =="Regression":
     st.title(f"Regression")
 
-    regression_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\encoded_data1.csv')
+    encoded_data1_csv = Path(__file__).parents[1] / 'Dashboard' / 'encoded_data1.csv'
+    regression_data= load_data(encoded_data1_csv)
+
+    #regression_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\encoded_data1.csv')
 
     st.header(f"Random Forest for Regression")
 
