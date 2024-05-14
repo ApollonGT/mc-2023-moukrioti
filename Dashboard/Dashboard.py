@@ -6,6 +6,8 @@ import seaborn as sns
 
 from streamlit_option_menu import option_menu
 
+from pathlib import Path
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
@@ -67,7 +69,9 @@ if selected =="Project Overview":
     st.subheader(f"Global Super Store Dataset")
     st.markdown('* The dataset used in this paper was found on Kaggle and contains details of online orders made by people around the world between 2011 and 2014.')
 
-    project_data = pd.read_csv(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Global_Superstore2.csv', encoding='latin-1')
+    Global_Superstore2_csv = Path(__file__).parents[1] / 'mc-2023-moukrioti'/ 'Dashboard' / 'Global_Superstore2.csv'
+    project_data= pd.read_csv(Global_Superstore2_csv, encoding = 'latin-1')
+    #project_data = pd.read_csv(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Global_Superstore2.csv', encoding='latin-1')
     st.write(project_data.head())
 
     st.subheader(f"New Features")
@@ -85,7 +89,7 @@ if selected =="Project Overview":
 if selected =="Exploratory Analysis":
     st.title(f"Exploratory Analysis")
     
-    exploratory_data = load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\new_df.csv')
+    exploratory_data = load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\new_df.csv')
     
     numeric_data = exploratory_data[['Sales','Quantity','Discount','Profit','Shipping Cost']]
     qualitative_data = exploratory_data[['Ship Mode','Segment','Region','Category','Sub-Category','gender','Order Priority']]
@@ -111,7 +115,7 @@ if selected =="Exploratory Analysis":
             st.pyplot()
 
     st.subheader(f"Correlation Matrix")
-    correlation_plot = load_plot("Correlation Matrix.png")
+    correlation_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Correlation Matrix.png')
     st.image(correlation_plot, use_column_width=True)
 
     # For Qualitative variables
@@ -135,23 +139,23 @@ if selected =="Exploratory Analysis":
     # Sales by year
 
     st.subheader(f"Sales by Year")
-    sales_year_plot = load_plot("Sales_year.png")
+    sales_year_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_year.png')
     st.image(sales_year_plot, use_column_width=True)
 
 
     # Sales by month of each year
     st.subheader(f"Sales by Month of Each Year")
-    sales_month_year_plot =load_plot("Sales_month_year.png")
+    sales_month_year_plot =load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_month_year.png')
     st.image(sales_month_year_plot, use_column_width=True)
 
     # Sales by Month
     st.subheader(f"Sales by Month")
-    sales_month_plot = load_plot("Sales_month.png")
+    sales_month_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_month.png')
     st.image(sales_month_plot, use_column_width=True)
 
     #Sales by Day 
     st.subheader(f"Sales by Day")
-    sales_day_plot = load_plot("Sales_day.png")
+    sales_day_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_day.png')
     st.image(sales_day_plot, use_column_width=True)
 
     # Interactive plot for sales by year, month,day
@@ -213,16 +217,16 @@ if selected =="Exploratory Analysis":
     # Which country has top 5 sales?
 
     st.subheader(f"Which countries contribute top 5 sales?")
-    sales_countries_plot =load_plot("5Sales_countries.png")
+    sales_countries_plot =load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\5Sales_countries.png')
     st.image(sales_countries_plot, use_column_width=True, caption="Top 5 Sales Countries")
 
-    sales_countries_percentage_plot = load_plot("5Sales_countries_percentage.png")
+    sales_countries_percentage_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\5Sales_countries_percentage.png')
     st.image(sales_countries_percentage_plot, use_column_width=True, caption= "Top 5 Sales Countries - Percentages")
 
     # Which are the top 6 profit-making product types on a yearly basis?
 
     st.subheader(f"Which are the 6 most profitable product types on a yearly basis?")
-    profit_products_plot = load_plot("6Profit_products.png")
+    profit_products_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\6Profit_products.png')
     st.image(profit_products_plot, use_column_width=True, caption="Top 6 products every year based on profit")
 
     # How the customers are distributed across the countries?
@@ -255,12 +259,12 @@ if selected =="Clustering":
 
     # Display elbow method plot
     st.subheader(f"Elbow Method Plot")
-    elbow_plot = load_plot("Elbow method.png")
+    elbow_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Elbow method.png')
     st.image(elbow_plot, use_column_width=True)
 
     # Display PCA plot
     st.subheader(f"3D Plot")
-    pca_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\3D Plot.png')
+    pca_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\3D Plot.png')
     st.image(pca_plot, use_column_width=True, caption="Plot with xlabel=PC1, ylabel=PC2, zlabel=PC3 and color= Cluster")
 
 # Classification Page
@@ -268,7 +272,7 @@ if selected =="Clustering":
 if selected =="Classification":
     st.title(f"Classification")
 
-    classification_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\combined_data.csv')
+    classification_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\combined_data.csv')
 
     st.header(f"Random Forest for Classification")
 
@@ -304,7 +308,7 @@ if selected =="Classification":
 if selected =="Regression":
     st.title(f"Regression")
 
-    regression_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\encoded_data1.csv')
+    regression_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\encoded_data1.csv')
 
     st.header(f"Random Forest for Regression")
 
@@ -348,7 +352,7 @@ if selected =="Regression":
     # Predicted vs Actual Values for new products
 
     st.header(f"Predicted vs Actual Sales for New Products")
-    newproducts_sales_plot = load_plot("newproducts_sales.png")
+    newproducts_sales_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\newproducts_sales.png')
     st.image(newproducts_sales_plot, use_column_width=True, caption="Predicted Sales for Five New Products ID vs Actual Sales")
 
 
