@@ -121,7 +121,7 @@ if selected =="Exploratory Analysis":
     
     #correlation_plot = render_image("Correlation Matrix.png")
 
-    correlation_matrix_plot = Path(__file__).parent / 'Dashboard' / 'Correlation Matrix.png'
+    correlation_matrix_plot = Path(__file__).parent /  "Correlation Matrix.png"
     correlation_plot = render_image(str(correlation_matrix_plot))
 
     # correlation_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Correlation Matrix.png')
