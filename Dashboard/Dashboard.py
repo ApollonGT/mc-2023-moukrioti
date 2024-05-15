@@ -124,7 +124,6 @@ if selected =="Exploratory Analysis":
     correlation_matrix_plot = Path(__file__).parent /  "Correlation Matrix.png"
     correlation_plot = render_image(str(correlation_matrix_plot))
 
-    # correlation_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Correlation Matrix.png')
     st.image(correlation_plot, use_column_width=True)
 
     # For Qualitative variables
@@ -148,23 +147,31 @@ if selected =="Exploratory Analysis":
     # Sales by year
 
     st.subheader(f"Sales by Year")
-    sales_year_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_year.png')
+    sales_year_path = Path(__file__).parent /  "Sales_year.png"
+    sales_year_plot = render_image(str(sales_year_path))
+
     st.image(sales_year_plot, use_column_width=True)
 
 
     # Sales by month of each year
     st.subheader(f"Sales by Month of Each Year")
-    sales_month_year_plot =load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_month_year.png')
+    sales_month_year_path = Path(__file__).parent /  "Sales_month_year.png"
+    sales_month_year_plot = render_image(str(sales_month_year_path))
+    
     st.image(sales_month_year_plot, use_column_width=True)
 
     # Sales by Month
     st.subheader(f"Sales by Month")
-    sales_month_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_month.png')
+    sales_month_path = Path(__file__).parent /  "Sales_month.png"
+    sales_month_plot = render_image(str(sales_month_path))
+    
     st.image(sales_month_plot, use_column_width=True)
 
     #Sales by Day 
     st.subheader(f"Sales by Day")
-    sales_day_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Sales_day.png')
+    sales_day_path = Path(__file__).parent /  "Sales_day.png"
+    sales_day_plot = render_image(str(sales_day_path))
+    
     st.image(sales_day_plot, use_column_width=True)
 
     # Interactive plot for sales by year, month,day
@@ -226,16 +233,24 @@ if selected =="Exploratory Analysis":
     # Which country has top 5 sales?
 
     st.subheader(f"Which countries contribute top 5 sales?")
-    sales_countries_plot =load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\5Sales_countries.png')
+    sales_countries_path = Path(__file__).parent /  "5Sales_countries.png"
+    sales_countries_plot = render_image(str(sales_countries_path))
+
     st.image(sales_countries_plot, use_column_width=True, caption="Top 5 Sales Countries")
 
-    sales_countries_percentage_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\5Sales_countries_percentage.png')
+    sales_countries_percentage_path = Path(__file__).parent /  "5Sales_countries_percentage.png"
+    sales_countries_percentage_plot = render_image(str(sales_countries_percentage_path))
+    
+    #sales_countries_percentage_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\5Sales_countries_percentage.png')
     st.image(sales_countries_percentage_plot, use_column_width=True, caption= "Top 5 Sales Countries - Percentages")
 
     # Which are the top 6 profit-making product types on a yearly basis?
 
     st.subheader(f"Which are the 6 most profitable product types on a yearly basis?")
-    profit_products_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\6Profit_products.png')
+    profit_products_path = Path(__file__).parent /  "6Profit_products.png"
+    profit_products_plot = render_image(str(profit_products_path))
+
+    #profit_products_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\6Profit_products.png')
     st.image(profit_products_plot, use_column_width=True, caption="Top 6 products every year based on profit")
 
     # How the customers are distributed across the countries?
@@ -268,12 +283,18 @@ if selected =="Clustering":
 
     # Display elbow method plot
     st.subheader(f"Elbow Method Plot")
-    elbow_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Elbow method.png')
+    elbow_method_path = Path(__file__).parent /  "Elbow method.png"
+    elbow_plot = render_image(str(elbow_method_path))
+
+    #elbow_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Elbow method.png')
     st.image(elbow_plot, use_column_width=True)
 
     # Display PCA plot
     st.subheader(f"3D Plot")
-    pca_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\3D Plot.png')
+    pca_path = Path(__file__).parent /  "3D Plot.png"
+    pca_plot = render_image(str(pca_path))
+
+    #pca_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\3D Plot.png')
     st.image(pca_plot, use_column_width=True, caption="Plot with xlabel=PC1, ylabel=PC2, zlabel=PC3 and color= Cluster")
 
 # Classification Page
@@ -367,7 +388,10 @@ if selected =="Regression":
     # Predicted vs Actual Values for new products
 
     st.header(f"Predicted vs Actual Sales for New Products")
-    newproducts_sales_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\newproducts_sales.png')
+    newproducts_sales_path = Path(__file__).parent /  "newproducts_sales.png"
+    newproducts_sales_plot = render_image(str(newproducts_sales_path))
+    
+    #newproducts_sales_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\newproducts_sales.png')
     st.image(newproducts_sales_plot, use_column_width=True, caption="Predicted Sales for Five New Products ID vs Actual Sales")
 
 
