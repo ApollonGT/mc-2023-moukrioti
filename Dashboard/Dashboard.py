@@ -119,10 +119,11 @@ if selected =="Exploratory Analysis":
 
     st.subheader(f"Correlation Matrix")
     
-    #correlation_plot = render_image("Correlation Matrix.png")
-
     correlation_matrix_plot = Path(__file__).parent /  "Correlation Matrix.png"
-    correlation_plot = render_image(str(correlation_matrix_plot))
+    correlation_plot = Image.open(correlation_matrix_plot)
+
+    #correlation_matrix_plot = Path(__file__).parent /  "Correlation Matrix.png"
+    #correlation_plot = render_image(str(correlation_matrix_plot))
 
     st.image(correlation_plot, use_column_width=True)
 
