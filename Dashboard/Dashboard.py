@@ -286,8 +286,8 @@ if selected =="Clustering":
     elbow_method_path = Path(__file__).parent /  "Elbow method.png"
     elbow_plot = render_image(str(elbow_method_path))
 
-    #elbow_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Elbow method.png')
-    st.image(elbow_plot, use_column_width=True)
+    st.image(elbow_plot)
+    #st.image(elbow_plot, use_column_width=True)
 
     # Display PCA plot
     st.subheader(f"3D Plot")
@@ -390,7 +390,7 @@ if selected =="Regression":
     st.header(f"Predicted vs Actual Sales for New Products")
     newproducts_sales_path = Path(__file__).parent /  "newproducts_sales.png"
     newproducts_sales_plot = render_image(str(newproducts_sales_path))
-    
+
     #newproducts_sales_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\newproducts_sales.png')
     st.image(newproducts_sales_plot, use_column_width=True, caption="Predicted Sales for Five New Products ID vs Actual Sales")
 
