@@ -59,7 +59,7 @@ def load_plot(filename):
 # Project and Dataset Overview Page
 
 if selected =="Project Overview":
-    st.title(f"Welcome to my Thesis Dashboard: Consumer and Product Analysis in Business Desicion-Making")
+    st.title(f"Welcome to my Thesis Dashboard: Consumer and Product Analysis Using Big Data in Business Desicion Making")
 
     st.header(f"Project Overview")
     st.markdown('* The aim of this paper is to examine how consumer and product analysis using big data contributes significantly to making good business decisions.')
@@ -121,10 +121,6 @@ if selected =="Exploratory Analysis":
     
     correlation_matrix_plot_url = "https://raw.githubusercontent.com/elisavetm/mc-2023-moukrioti/main/Dashboard/Correlation%20Matrix.png"
     st.image(correlation_matrix_plot_url, use_column_width=True)
-
-    #correlation_matrix_plot = Path(__file__).parent /  "Correlation Matrix.png"
-    #correlation_plot = render_image(str(correlation_matrix_plot))
-    #st.image(correlation_plot, use_column_width=True)
 
     # For Qualitative variables
     st.header(f"Qualitative Variables")
@@ -284,7 +280,6 @@ if selected =="Classification":
     combined_data_csv = Path(__file__).parents[1] / 'Dashboard' / 'combined_data.csv'
     classification_data= load_data(combined_data_csv)
 
-    #classification_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\combined_data.csv')
 
     st.header(f"Random Forest for Classification")
 
@@ -323,7 +318,6 @@ if selected =="Regression":
     encoded_data1_csv = Path(__file__).parents[1] / 'Dashboard' / 'encoded_data1.csv'
     regression_data= load_data(encoded_data1_csv)
 
-    #regression_data =load_data(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\encoded_data1.csv')
 
     st.header(f"Random Forest for Regression")
 
