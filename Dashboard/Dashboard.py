@@ -119,13 +119,13 @@ if selected =="Exploratory Analysis":
 
     st.subheader(f"Correlation Matrix")
     
-    correlation_matrix_plot = "https://raw.githubusercontent.com/elisavetm/mc-2023-moukrioti/main/Dashboard/3D%20Plot.png"
-    correlation_plot = render_image(str(correlation_matrix_plot))
+    correlation_matrix_plot_url = "https://raw.githubusercontent.com/elisavetm/mc-2023-moukrioti/main/Dashboard/3D%20Plot.png"
+    st.image(correlation_matrix_plot_url, use_column_width=True)
 
     #correlation_matrix_plot = Path(__file__).parent /  "Correlation Matrix.png"
     #correlation_plot = render_image(str(correlation_matrix_plot))
 
-    st.image(correlation_plot, use_column_width=True)
+    #st.image(correlation_plot, use_column_width=True)
 
     # For Qualitative variables
     st.header(f"Qualitative Variables")
