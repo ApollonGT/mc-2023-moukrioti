@@ -8,6 +8,7 @@ from streamlit_option_menu import option_menu
 
 from pathlib import Path
 from PIL import Image
+from image_loader import render_image
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import RandomForestRegressor
@@ -117,9 +118,7 @@ if selected =="Exploratory Analysis":
             st.pyplot()
 
     st.subheader(f"Correlation Matrix")
-
-    Correlation_Matrix_plot = 'Dashboard'/ 'Correlation Matrix.png'
-    correlation_plot = Image.open(Correlation_Matrix_plot)
+    correlation_plot = render_image("Correlation Matrix.png")
 
     # correlation_plot = load_plot(r'C:\Users\ελισαβετ\Documents\thesis\mc-2023-moukrioti\Dashboard\Correlation Matrix.png')
     st.image(correlation_plot, use_column_width=True)
